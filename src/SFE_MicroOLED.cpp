@@ -54,7 +54,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PROGMEM __attribute__((section(".progmem.data")))
 
 // Add header of the fonts here.  Remove as many as possible to conserve FLASH memory.
-#include "util/font5x7.h"
+//#include "util/font5x7.h"
 //#include "util/font8x16.h"
 //#include "util/fontlargenumber.h"
 //#include "util/7segment.h"
@@ -62,19 +62,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Change the total fonts included
 #ifdef INCLUDE_LARGE_LETTER_FONT
-#define TOTALFONTS		2
+#define TOTALFONTS		0
 #else
-#define TOTALFONTS		1
+#define TOTALFONTS		0
 #endif
 
 // Add the font name as declared in the header file.  Remove as many as possible to conserve FLASH memory.
 const unsigned char *MicroOLED::fontsPointer[]={
-	font5x7
+//	font5x7
 //	,font8x16
 //	,sevensegment
 //	,fontlargenumber
 #ifdef INCLUDE_LARGE_LETTER_FONT
-	,fontlargeletter31x48
+//	,fontlargeletter31x48
 #endif
 };
 
